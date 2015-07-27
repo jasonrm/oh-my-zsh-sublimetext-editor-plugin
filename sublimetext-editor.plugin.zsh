@@ -13,7 +13,7 @@ if  [[ $('uname') == 'Darwin' ]]; then
 
     for _sublime_path in $_sublime_darwin_paths; do
         if [[ -a $_sublime_path ]]; then
-            alias subl="${_sublime_path}"
+            alias subl="'${_sublime_path}'"
             export EDITOR="'$_sublime_path' -w"
             break
         fi
